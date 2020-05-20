@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TP aplicaciones especificas de redes</title>
+    <link rel=StyleSheet href="estilos.css" type="text/css" media=screen>
+    <script type="text/javascript" src="funciones.js"></script>
+  </head>
+  <body>
+
+    <header class="cabecera border_shadow" style = "width: 100%">
+      <a href="https://www.ips.edu.ar"><img class="imagen" src="media/logo.jpg" alt="" id="logo_del_poli"></a>
+      <div class="botonera_grande center" id="botonera_grande" >
+        <ul style="padding: 0; margin: 0">
+          <li class="boton"  onclick="location.href='tabla.html'">Tabla</li>
+          <li class="boton"  onclick="location.href='https://www.github.com'">Github</li>
+          <li class="boton"  onclick="location.href='https://www.instagram.com'">Instagram</li>
+          <li class="boton"  onclick="location.href='https://www.youtube.com'">Youtube</li>
+          <li class="boton"  onclick="location.href='https://mail.google.com/'">Gmail</li>
+        </ul>
+      </div>
+
+      <div class="botonera_chica" id="botonera_chica" >
+        <h2 class="menu_text">Menu</h2>
+        <img class="imagen_botonera" src="media/boton_desplegable.png" id="boton">
+
+        <div class="dropdown border_shadow" id="dropdown">
+          <ul style="padding: 0; margin: 0" >
+            <li class="boton_dropdown center" style="background:#c49018" onclick="location.href='https://www.github.com'">Github</span></li>
+            <li class="boton_dropdown center" style="background:#e4ac2b" onclick="location.href='https://twitter.com'">Twitter</a></li>
+            <li class="boton_dropdown center" style="background:#c49018" onclick="location.href='https://www.instagram.com'">Instagram</a></li>
+            <li class="boton_dropdown center" style="background:#e4ac2b" onclick="location.href='https://www.youtube.com'">Youtube</a></li>
+            <li class="boton_dropdown center" style="background:#c49018" onclick="location.href='https://mail.google.com'">Gmail</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </header>
+
+
+
+<script>
+function onClick(element) {
+  var id = element.id
+  document.getElementById("modal"+id).style.display = "block";
+}
+</script>
+
+
+    <footer class="footer center">
+       <span class="integrantes">Rodrigo Mar&iacute</span>
+       <span class="integrantes"> Ignacio Roca</span>
+       <span class="integrantes">Lautaro Teta Musa</span>
+    </footer>
+
+    <script type="text/javascript">
+
+      var botoneraG = document.getElementById("botonera_grande");
+      var botoneraC = document.getElementById("botonera_chica");
+
+      var imagen = document.getElementById("logo_del_poli");
+      imagen.addEventListener("mouseover", function(){init(imagen.id); vibracion()});
+      imagen.addEventListener("mouseout", function(){novibracion(imagen)});
+
+      if(window.innerWidth > 720){ //Desktop
+        botonera_grande();
+      }
+      else{
+        botonera_chica();
+
+        var boton = document.getElementById("boton");
+
+        boton.addEventListener("mouseenter", verDropdown);
+      }
+
+      window.addEventListener('resize', resize);
+    </script>
+
+  </body>
+</html>
