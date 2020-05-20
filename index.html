@@ -4,11 +4,15 @@
     <meta charset="utf-8">
     <title>TP aplicaciones especificas de redes</title>
     <link rel=StyleSheet href="estilos.css" type="text/css" media=screen>
+    <link rel=StyleSheet href="estilosTabla.css" type="text/css" media=screen>
+    <script src="jquery-3.5.1.js"></script>
+
+
     <script type="text/javascript" src="funciones.js"></script>
   </head>
   <body>
 
-    <header class="cabecera border_shadow" style = "width: 100%">
+    <header class="cabecera border_shadow">
       <a href="https://www.ips.edu.ar"><img class="imagen" src="media/logo.jpg" alt="" id="logo_del_poli"></a>
       <div class="botonera_grande center" id="botonera_grande" >
         <ul style="padding: 0; margin: 0">
@@ -38,20 +42,54 @@
     </header>
 
 
+    <main style="padding-top:200px ;min-height: 600px">
+      <div class="tabla formulario">
+          <form class="" action="datos.php" method="post">
 
-<script>
-function onClick(element) {
-  var id = element.id
-  document.getElementById("modal"+id).style.display = "block";
-}
-</script>
+            <input id="check" type="checkbox" name="" value="aaa">
 
+
+            <input id="txt" type="hidden" name="nombre" value="">
+
+            <select class="" name="">
+              <option value="aa">a</option>
+              <option value="bb">b</option>
+              <option value="cc">c</option>
+            </select>
+
+            <textarea name="name" rows="8" cols="80"></textarea>
+
+            <input type="submit" name="" value="">
+          </form>
+      </div>
+    </main>
 
     <footer class="footer center">
        <span class="integrantes">Rodrigo Mar&iacute</span>
        <span class="integrantes"> Ignacio Roca</span>
        <span class="integrantes">Lautaro Teta Musa</span>
     </footer>
+
+    <script>
+      $("#check").click(
+        function(){
+          if($(this).is(':checked')) {
+            $('#txt').attr('type', 'text');
+          }
+          else {
+            $('#txt').attr('type', 'hidden');
+          }
+        }
+      );
+    </script>
+
+
+    <script>
+    function onClick(element) {
+      var id = element.id
+      document.getElementById("modal"+id).style.display = "block";
+    }
+    </script>
 
     <script type="text/javascript">
 
