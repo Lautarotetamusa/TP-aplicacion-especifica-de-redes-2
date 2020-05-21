@@ -7,7 +7,6 @@
     <link rel=StyleSheet href="estilosTabla.css" type="text/css" media=screen>
     <script src="jquery-3.5.1.js"></script>
 
-
     <script type="text/javascript" src="funciones.js"></script>
   </head>
   <body>
@@ -28,7 +27,7 @@
         <h2 class="menu_text">Menu</h2>
         <img class="imagen_botonera" src="media/boton_desplegable.png" id="boton">
 
-        <div class="dropdown border_shadow" id="dropdown">
+        <div class="dropdown border_shadow" style="display: none;" id="dropdown">
           <ul style="padding: 0; margin: 0" >
             <li class="boton_dropdown center" style="background:#c49018" onclick="location.href='https://www.github.com'">Github</span></li>
             <li class="boton_dropdown center" style="background:#e4ac2b" onclick="location.href='https://twitter.com'">Twitter</a></li>
@@ -44,20 +43,70 @@
 
     <main style="padding-top:200px ;min-height: 600px">
       <div class="tabla formulario">
+          <h2>completa todos los campos salamin</h2>
+
           <form class="" action="datos.php" method="post">
 
-            <input id="check" type="checkbox" name="" value="aaa">
+            <span class="entrada_txt">nombre:   </span> <input class="entrada" type="text" name="nombre" value=""> <br>
+            <span class="entrada_txt">apellido: </span> <input class="entrada" type="text" name="apellido" value=""> <br>
+            <span class="entrada_txt">edad:   </span> <input class="entrada" type="number" min="0" name="edad" value=""> <br>
 
-
-            <input id="txt" type="hidden" name="nombre" value="">
-
-            <select class="" name="">
-              <option value="aa">a</option>
-              <option value="bb">b</option>
-              <option value="cc">c</option>
+            <label for="checkbox"> ¿Usted tiene hijos?</label>
+            <input class="entrada" id="check2" type="checkbox" name=""><br>
+            <input class="entrada" id="select" type="hidden" name="hijos" required placeholder="¿Cuantos?">
+            <br>
+            <label for="select"> Ingrese genero </label>
+            <select class="entrada" name="categorias[]">
+              <option value="Fem">Femenino</option>
+              <option value="Masc">Masculino</option>
+              <option value="Heli">Helicoptero</option>
+              <option value="Fan">Fantoche Triple</option>
             </select>
+            <br>
+            <label class="entrada_txt" for="email">Ingrese mail: </label>
+            <input class="entrada" type="email" id="email" name="correo" required placeholder="example@gmail.com">
+            <br>
+            <label for="file">Subi un archivo puto: </label>
+            <input style="margin-top: 20px" type="file" name="archivosubido">
+            <br>
+            <label class="entrada_txt" for="time"> ultima paja: </label>
+            <input class="entrada" type="time" name="eta">
+            <br>
+            <label for="date"> fecha de cumpleaños: </label>
+            <input class="entrada" type="date" name="fecha" list="listafechascita" min="1900-01-01" max="2500-01-01" required>
+            <br>
+            <label for="password">Ingrese contraseña del homebanking: </label>
+            <input class="entrada" type="password" name="pass" placeholder="Contraseña...">
+            <br>
+            <label for="range">¿A que volumen suele escuchar porno?: </label>
+            <input class="entrada" type="range" name="volumen" min="0" max="100" step="1">
+            <br>
+            <br>
+            <textarea name="name" rows="2" cols="40" required placeholder="Observaciones..."></textarea>
+            <br>
+            <p>¿Qué navegador usas?</p>
+            <input list="browsers" name="browser" id="browser">
+            <datalist id="browsers">
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+                <option value="Duck Duck go">
+                <option value="chrominium">
+                <option value="Internet explorer">
+            </datalist>
+            <input type="button" onclick="alert('Flaco porque no separas ese culo de la silla y te pones a hacer algo productivo antes de estar poniendo el navegador que usas, dejalo eso a mi abuelo carlitos el locazo Marí. Vola de aca o segui completando lo demas, no te quiero ni ver por aca. Una cosa más, nose lo que pusiste pero si pusiste otra cosa que no sea Duck Duck go entonces podes empezar tu vida cuando te levantes suicidandote. Gracias por completar (:')" value="Opinion sobre su explorador">
+            <p>¿Cual es tu color preferido?
+              <input id=checkColor1 type="checkbox">
+              <input id=hombre type="color" value="#0000ff">
+              <input id=checkColor2 type="checkbox">
+              <input id=mujer type="color" value="#ff33cc">
+              <input id=checkColor3 type="checkbox">
+              <input id=otro type="color">
+              <input id=texto type="hidden" value="Seleccione un color">
+            </p>
 
-            <textarea name="name" rows="8" cols="80"></textarea>
 
             <input type="submit" name="" value="">
           </form>
@@ -81,7 +130,71 @@
           }
         }
       );
+
+      $("#check2").click(
+        function() {
+          if ($(this).is(':checked')) {
+            $('#select').attr('type', 'select');
+          } else {
+            $('#select').attr('type', 'hidden');
+          }
+        }
+      );
     </script>
+
+
+    <!--SCRIPT PARA LOS COLORES-->
+  <script type="text/javascript">
+    $("#checkColor1").click(
+      function() {
+        if ($(this).is(':checked')) {
+          $('#checkColor2').attr('type', 'hidden');
+          $('#checkColor3').attr('type', 'hidden');
+          $('#mujer').attr('type', 'hidden');
+          $('#otro').attr('type', 'hidden');
+        } else {
+          $('#checkColor2').attr('type', 'checkbox');
+          $('#checkColor3').attr('type', 'checkbox');
+          $('#mujer').attr('type', 'color');
+          $('#otro').attr('type', 'color');
+        }
+      }
+    );
+
+    $("#checkColor2").click(
+      function() {
+        if ($(this).is(':checked')) {
+          $('#checkColor1').attr('type', 'hidden');
+          $('#checkColor3').attr('type', 'hidden');
+          $('#hombre').attr('type', 'hidden');
+          $('#otro').attr('type', 'hidden');
+        } else {
+          $('#checkColor1').attr('type', 'checkbox');
+          $('#checkColor3').attr('type', 'checkbox');
+          $('#hombre').attr('type', 'color');
+          $('#otro').attr('type', 'color');
+        }
+      }
+    );
+
+    $("#checkColor3").click(
+      function() {
+        if ($(this).is(':checked')) {
+          $('#checkColor1').attr('type', 'hidden');
+          $('#checkColor2').attr('type', 'hidden');
+          $('#hombre').attr('type', 'hidden');
+          $('#mujer').attr('type', 'hidden');
+          $('#texto').attr('type', 'text');
+        } else {
+          $('#checkColor1').attr('type', 'checkbox');
+          $('#checkColor2').attr('type', 'checkbox');
+          $('#hombre').attr('type', 'color');
+          $('#mujer').attr('type', 'color');
+          $('#texto').attr('type', 'hidden');
+        }
+      }
+    );
+  </script>
 
 
     <script>

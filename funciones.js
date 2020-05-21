@@ -2,7 +2,7 @@ function verDropdown(){
   var dropdown = document.getElementById("dropdown");
   var botonera = document.getElementById("botonera_chica");
 
-  dropdown.style.opacity = "1";
+  dropdown.style.removeProperty('display');
   botonera.style.height = "300px";
 
   botonera.addEventListener("mouseleave", ocultarDropDown);
@@ -14,7 +14,7 @@ function ocultarDropDown(){
 
   botonera.style.height = "inherit";
 
-  dropdown.style.opacity = "0";
+  dropdown.style.display = "none";
 }
 
 function resize(){
@@ -54,12 +54,6 @@ function novibracion(imagen){
   stop = true;
 }
 
-function escala_de_grises(img){
-  img.style.filter =  "grayscale(100%)" ;
-}
-function Normal(img){
-  img.style.filter = "grayscale(0%)" ;
-}
 
 function botonera_chica(){
   var botoneraG = document.getElementById("botonera_grande");

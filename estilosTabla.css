@@ -1,10 +1,8 @@
-
 .cont_tabla{
   position: relative;
   top: 200px;
   margin-bottom: 400px;
 }
-
 
 .tabla{
   background: #eee;
@@ -12,6 +10,7 @@
   border-collapse: collapse;
   margin: 0 auto;
   border: 2px solid black;
+  text-align: center;
 
   //sombra echa con un generador xd
   -webkit-box-shadow: 6px 10px 47px 0px rgba(0,0,0,0.75);
@@ -31,8 +30,4 @@ td, th{
   position: relative;
   width: 50px;
   height: 50px
-}
-
-.cont_imagen{
-  position: relative;
 }
