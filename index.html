@@ -52,11 +52,11 @@
             <span class="entrada_txt">edad:   </span> <input class="entrada" type="number" min="0" name="edad" value=""> <br>
 
             <label for="checkbox"> ¿Usted tiene hijos?</label>
-            <input class="entrada" id="check2" type="checkbox" name=""><br>
-            <input class="entrada" id="select" type="hidden" name="hijos" required placeholder="¿Cuantos?">
+            <input class="entrada" id="check2" type="checkbox" name="hijos" value="True"><br>
+            <input class="entrada" id="select" type="hidden" name="cant_hijos" required placeholder="¿Cuantos?">
             <br>
             <label for="select"> Ingrese genero </label>
-            <select class="entrada" name="categorias[]">
+            <select class="entrada" name="genero">
               <option value="Fem">Femenino</option>
               <option value="Masc">Masculino</option>
               <option value="Heli">Helicoptero</option>
@@ -70,7 +70,7 @@
             <input style="margin-top: 20px" type="file" name="archivosubido">
             <br>
             <label class="entrada_txt" for="time"> ultima paja: </label>
-            <input class="entrada" type="time" name="eta">
+            <input class="entrada" type="time" name="ult_paja">
             <br>
             <label for="date"> fecha de cumpleaños: </label>
             <input class="entrada" type="date" name="fecha" list="listafechascita" min="1900-01-01" max="2500-01-01" required>
@@ -86,7 +86,7 @@
             <br>
             <p>¿Qué navegador usas?</p>
             <input list="browsers" name="browser" id="browser">
-            <datalist id="browsers">
+            <select id="browsers" class="entrada" name="navegador">
                 <option value="Edge">
                 <option value="Firefox">
                 <option value="Chrome">
@@ -95,7 +95,7 @@
                 <option value="Duck Duck go">
                 <option value="chrominium">
                 <option value="Internet explorer">
-            </datalist>
+            </select>
             <input type="button" onclick="alert('Flaco porque no separas ese culo de la silla y te pones a hacer algo productivo antes de estar poniendo el navegador que usas, dejalo eso a mi abuelo carlitos el locazo Marí. Vola de aca o segui completando lo demas, no te quiero ni ver por aca. Una cosa más, nose lo que pusiste pero si pusiste otra cosa que no sea Duck Duck go entonces podes empezar tu vida cuando te levantes suicidandote. Gracias por completar (:')" value="Opinion sobre su explorador">
             <p>¿Cual es tu color preferido?
               <input id=checkColor1 type="checkbox">
