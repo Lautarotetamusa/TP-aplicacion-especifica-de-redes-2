@@ -15,11 +15,11 @@
       <a href="https://www.ips.edu.ar"><img class="imagen" src="media/logo.jpg" alt="" id="logo_del_poli"></a>
       <div class="botonera_grande center" id="botonera_grande" >
         <ul style="padding: 0; margin: 0">
-          <li class="boton"  onclick="location.href='tabla.html'">Tabla</li>
+          <li class="boton"  onclick="location.href='tabla.html'">Nosotros</li>
+          <li class="boton"  onclick="location.href='mostrar.php'">Tabla</li>
           <li class="boton"  onclick="location.href='https://www.github.com'">Github</li>
           <li class="boton"  onclick="location.href='https://www.instagram.com'">Instagram</li>
           <li class="boton"  onclick="location.href='https://www.youtube.com'">Youtube</li>
-          <li class="boton"  onclick="location.href='https://mail.google.com/'">Gmail</li>
         </ul>
       </div>
 
@@ -29,11 +29,11 @@
 
         <div class="dropdown border_shadow" style="display: none;" id="dropdown">
           <ul style="padding: 0; margin: 0" >
-            <li class="boton_dropdown center" style="background:#c49018" onclick="location.href='https://www.github.com'">Github</span></li>
-            <li class="boton_dropdown center" style="background:#e4ac2b" onclick="location.href='https://twitter.com'">Twitter</a></li>
-            <li class="boton_dropdown center" style="background:#c49018" onclick="location.href='https://www.instagram.com'">Instagram</a></li>
-            <li class="boton_dropdown center" style="background:#e4ac2b" onclick="location.href='https://www.youtube.com'">Youtube</a></li>
-            <li class="boton_dropdown center" style="background:#c49018" onclick="location.href='https://mail.google.com'">Gmail</a></li>
+            <li class="boton_dropdown center" onclick="location.href='tabla.html'">Nosotros</span></li>
+            <li class="boton_dropdown center" onclick="location.href='mostrar.php'">Tabla</a></li>
+            <li class="boton_dropdown center" onclick="location.href='https://www.github.com'">Github</a></li>
+            <li class="boton_dropdown center" onclick="location.href='https://www.instagram.com'">Instagram</a></li>
+            <li class="boton_dropdown center" onclick="location.href='https://www.youtube.com'">Youtube</a></li>
           </ul>
         </div>
       </div>
@@ -53,50 +53,43 @@
 
             <label for="checkbox"> ¿Usted tiene hijos?</label>
             <input class="entrada" id="check2" type="checkbox" name="hijos" value="True"><br>
-            <input class="entrada" id="select" type="hidden" name="cant_hijos" required placeholder="¿Cuantos?">
-            <br>
+            <input class="entrada" id="select" type="hidden" name="cant_hijos" required placeholder="¿Cuantos?"> <br>
             <label for="select"> Ingrese genero </label>
             <select class="entrada" name="genero">
               <option value="Fem">Femenino</option>
               <option value="Masc">Masculino</option>
               <option value="Heli">Helicoptero</option>
               <option value="Fan">Fantoche Triple</option>
-            </select>
-            <br>
+            </select> <br>
             <label class="entrada_txt" for="email">Ingrese mail: </label>
-            <input class="entrada" type="email" id="email" name="correo" required placeholder="example@gmail.com">
-            <br>
-            <label for="file">Subi un archivo puto: </label>
-            <input style="margin-top: 20px" type="file" name="archivosubido">
-            <br>
+            <input class="entrada" type="email" id="email" name="correo" required placeholder="example@gmail.com"> <br>
+
             <label class="entrada_txt" for="time"> ultima paja: </label>
-            <input class="entrada" type="time" name="ult_paja">
-            <br>
+            <input class="entrada" type="time" name="ult_paja"> <br>
+
             <label for="date"> fecha de cumpleaños: </label>
-            <input class="entrada" type="date" name="fecha" list="listafechascita" min="1900-01-01" max="2500-01-01" required>
-            <br>
+            <input class="entrada" type="date" name="fecha" list="listafechascita" min="1900-01-01" max="2500-01-01" required> <br>
+
             <label for="password">Ingrese contraseña del homebanking: </label>
-            <input class="entrada" type="password" name="pass" placeholder="Contraseña...">
-            <br>
+            <input class="entrada" type="password" name="pass" placeholder="Contraseña..."> <br>
+
             <label for="range">¿A que volumen suele escuchar porno?: </label>
-            <input class="entrada" type="range" name="volumen" min="0" max="100" step="1">
-            <br>
-            <br>
-            <textarea name="name" rows="2" cols="40" required placeholder="Observaciones..."></textarea>
-            <br>
-            <p>¿Qué navegador usas?</p>
-            <input list="browsers" name="browser" id="browser">
-            <select id="browsers" class="entrada" name="navegador">
-                <option value="Edge">
-                <option value="Firefox">
-                <option value="Chrome">
-                <option value="Opera">
-                <option value="Safari">
-                <option value="Duck Duck go">
-                <option value="chrominium">
-                <option value="Internet explorer">
+            <input class="entrada" type="range" name="volumen" min="0" max="100" step="1"> <br>
+
+            <label for="select"> ¿Qué navegador usas? </label>
+            <select class="entrada" id="browsers" class="entrada" name="navegador">
+                <option value="Edge">Edge</option>
+                <option value="Firefox">Firefox</option>
+                <option value="Chrome">Chrome</option>
+                <option value="Opera">Opera</option>
+                <option value="Safari">Safari</option>
+                <option value="Duck Duck go">Duck Duck go</option>
+                <option value="chrominium">chrominium</option>
+                <option value="Internet explorer">Internet explorer</option>
             </select>
-            <input type="button" onclick="alert('Flaco porque no separas ese culo de la silla y te pones a hacer algo productivo antes de estar poniendo el navegador que usas, dejalo eso a mi abuelo carlitos el locazo Marí. Vola de aca o segui completando lo demas, no te quiero ni ver por aca. Una cosa más, nose lo que pusiste pero si pusiste otra cosa que no sea Duck Duck go entonces podes empezar tu vida cuando te levantes suicidandote. Gracias por completar (:')" value="Opinion sobre su explorador">
+            <input class="entrada" type="button" onclick="alert('Flaco porque no separas ese culo de la silla y te pones a hacer algo productivo antes de estar poniendo el navegador que usas, dejalo eso a mi abuelo carlitos el locazo Marí. Vola de aca o segui completando lo demas, no te quiero ni ver por aca. Una cosa más, nose lo que pusiste pero si pusiste otra cosa que no sea Duck Duck go entonces podes empezar tu vida cuando te levantes suicidandote. Gracias por completar (:')"
+            value="Opinion sobre su explorador">
+
             <p>¿Cual es tu color preferido?
               <input id=checkColor1 type="checkbox">
               <input id=hombre type="color" value="#0000ff">
@@ -107,8 +100,52 @@
               <input id=texto type="hidden" value="Seleccione un color">
             </p>
 
+            <label for="text">¿De que equipo profesional de cricket sos?</label>
+            <input id="equipo_cricket" class="entrada" type="text"><br>
 
-            <input type="submit" name="" value="">
+            <label for="list">¿Si pudieras parar el tiempo a gusto que cosas harias? </label>
+              <input class="entrada" list="cosas_tiempo" name="c_tiempo">
+                <datalist id="cosas_tiempo">
+                  <option value="Suicidarte">
+                  <option value="Manosear a la persona que te gusta">
+                  <option value="Idear un plan para que vuelva el comunismo ruso">
+                  <option value="Chorear mangas hentai al gordo otaku de la esquina de tu casa">
+                  <option value="Infiltrarte en el area 51 para darte cuenta que el unico mutante ahi sos vos">
+                  <option value="Cagar a piñas a un enano">
+                  <option value="Cagar a piñas a una vieja">
+                  <option value="Cagar a piñas a schujman">
+                </datalist>
+
+            <p>Que tu corazon te guie ¿Tendrias de amigo a un enano?
+              <input id="check4" type="checkbox">  Si
+              <input id="check5" type="checkbox">  No
+              <input id="opinion1" type="hidden" value="Ah negri pero vos sos un raro" style="font-size=20">
+              <input id="opinion2" type="hidden" value="Bien ahi"></p>
+
+            <p>Que tu corazon te guie ¿Le darias el asiento de bondi a una vieja?
+              <input id="check6" type="checkbox">  Si
+              <input id="check7" type="checkbox">  No
+               <input id="opinion3" type="hidden" value="Ah negri pero vos sos recontra raro">
+               <input id="opinion4" type="hidden" value="Muy bien">
+             </p>
+
+            <label for="limones">Si la vida te da limones:</label>
+              <select id="limones" class="entrada">
+                <option>Hace limonada</option>
+                <option>Tiraselo al vecino</option>
+                <option>Toma el poli amenazando a los profes con estos</option>
+                <option>Abri los ojos, mira para arriba y tirate el jugo encima</option>
+                <option>Chupalos hasta que te quede le cara como mirta legrand</option>
+              </select>
+
+
+            <p>
+                <label for="range">¿Que tan otaku sos del 1 al 10?¿Cuantos animes viste?: </label>
+                <input class="entrada" type="range" name="otaku" min="0" max="10" step="1">
+                <input class="entrada" type="text">
+            </p>
+
+            <input class="entrada" type="submit" name="" value="Enviar">
           </form>
       </div>
     </main>
@@ -119,6 +156,8 @@
        <span class="integrantes">Lautaro Teta Musa</span>
     </footer>
 
+
+    <!--SCRIPT PARA LOS INPUTS-->
     <script>
       $("#check").click(
         function(){
@@ -140,11 +179,57 @@
           }
         }
       );
+      $("#check4").click(
+        function() {
+          if ($(this).is(':checked')) {
+            $('#check5').attr('type', 'hidden');
+            $('#opinion1').attr('type', 'text');
+          } else {
+            $('#check5').attr('type', 'checkbox');
+            $('#opinion1').attr('type', 'hidden');
+          }
+        }
+      );
+
+      $("#check5").click(
+        function() {
+          if ($(this).is(':checked')) {
+            $('#check4').attr('type', 'hidden');
+            $('#opinion2').attr('type', 'text');
+          } else {
+            $('#check4').attr('type', 'checkbox');
+            $('#opinion2').attr('type', 'hidden');
+          }
+        }
+      );
+
+      $("#check6").click(
+        function() {
+          if ($(this).is(':checked')) {
+            $('#check7').attr('type', 'hidden');
+            $('#opinion3').attr('type', 'text');
+          } else {
+            $('#check7').attr('type', 'checkbox');
+            $('#opinion3').attr('type', 'hidden');
+          }
+        }
+      );
+
+      $("#check7").click(
+        function() {
+          if ($(this).is(':checked')) {
+            $('#check6').attr('type', 'hidden');
+            $('#opinion4').attr('type', 'text');
+          } else {
+            $('#check6').attr('type', 'checkbox');
+            $('#opinion4').attr('type', 'hidden');
+          }
+        }
+      );
     </script>
 
-
     <!--SCRIPT PARA LOS COLORES-->
-  <script type="text/javascript">
+    <script type="text/javascript">
     $("#checkColor1").click(
       function() {
         if ($(this).is(':checked')) {
@@ -195,14 +280,6 @@
       }
     );
   </script>
-
-
-    <script>
-    function onClick(element) {
-      var id = element.id
-      document.getElementById("modal"+id).style.display = "block";
-    }
-    </script>
 
     <script type="text/javascript">
 

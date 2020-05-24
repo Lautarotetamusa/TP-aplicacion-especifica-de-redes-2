@@ -6,6 +6,7 @@ body{
   color: #393b39;
   margin: 0;
   padding: 0;
+
 }
 /*FOOTER*/
 .footer{
@@ -53,7 +54,6 @@ body{
 
 /*BOTONERA*/
   .cabecera{
-    margin-top: 15px;
     display: flex;
     position: fixed;
     justify-content: space-between;
@@ -64,7 +64,7 @@ body{
 
     background: #c49018;
     border: 1px solid #e4ac2b;
-    box-shadow: 2px -15px 31px -4px rgba(18,18,16,0.65);
+    box-shadow: 0px 4px 47px 0px rgba(0,0,0,0.61);
   }
   .imagen{
     height: 80px;
@@ -93,7 +93,7 @@ body{
   }
   .dropdown{
     margin-top: 20px;
-    background: #e4ac2b;
+    background: #c49018;
     border: 1px solid #e4ac2b;
     transition: opacity 0.2s linear;
   }
@@ -102,6 +102,9 @@ body{
   }
   .boton_dropdown:hover{
     opacity: 0.5;
+  }
+  .boton_dropdown:nth-of-type(2n){
+    background:#e4ac2b;
   }
   .menu_text{
     display: inline;

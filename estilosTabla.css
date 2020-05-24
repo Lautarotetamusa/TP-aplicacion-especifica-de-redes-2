@@ -1,7 +1,10 @@
 .cont_tabla{
+  overflow-x: auto;
   position: relative;
   top: 200px;
   margin-bottom: 400px;
+  scrollbar-color: #c49018 #eee;
+  scrollbar-width: 8px;
 }
 
 .tabla{
@@ -19,12 +22,56 @@
 }
 
 td, th{
-  border: 1px solid black;
   min-width: 30px;
-  width: 5%;
   padding: 5px 10px 5px 10px;
   text-align: center;
 }
+tr:nth-of-type(2n){
+  background: #f0f0f0;
+}
+thead:first-child{
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 720px) {
+   table {
+       width:100%;
+   }
+   thead {
+       display: none;
+   }
+   tbody td {
+       display: block;
+       text-align:center;
+   }
+
+   td {
+			position: relative;
+			padding-left: 50%;
+      border-bottom: 1px solid #ccc;
+		}
+
+		td:before {
+			position: absolute;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+		}
+
+   td:nth-of-type(1):before { content: "Nombre"; font-weight: bold;}
+		td:nth-of-type(2):before { content: "Apellido"; font-weight: bold;}
+		td:nth-of-type(3):before { content: "Edad"; font-weight: bold;}
+		td:nth-of-type(4):before { content: "Genero"; font-weight: bold;}
+		td:nth-of-type(5):before { content: "Correo";font-weight: bold; }
+		td:nth-of-type(6):before { content: "Ultima paja"; font-weight: bold;}
+		td:nth-of-type(7):before { content: "Date Fecha"; font-weight: bold;}
+		td:nth-of-type(8):before { content: "Dream Pass"; font-weight: bold;}
+		td:nth-of-type(9):before { content: "Volumen"; font-weight: bold;}
+		td:nth-of-type(10):before { content: "Navegador"; font-weight: bold;}
+}
+
+
 
 .fotos_personales{
   position: relative;

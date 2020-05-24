@@ -10,15 +10,25 @@
   </head>
   <body>
 
+    <style media="screen">
+      @media screen and (max-width: 720px) {
+        td:nth-of-type(1):before { content: "Nombre"; font-weight: bold;}
+        td:nth-of-type(2):before { content: "Edad"; font-weight: bold;}
+        td:nth-of-type(3):before { content: "Mail"; font-weight: bold;}
+        td:nth-of-type(4):before { content: "DNI"; font-weight: bold;}
+        td:nth-of-type(5):before { content: "Foto"; font-weight: bold;}
+      }
+    </style>
+
   <header class="cabecera border_shadow">
     <a href="https://www.ips.edu.ar"><img class="imagen" src="media/logo.jpg" alt="" id="logo_del_poli"></a>
     <div class="botonera_grande center" id="botonera_grande" >
       <ul style="padding: 0; margin: 0">
-        <li class="boton"  onclick="location.href='index.html'">Volver</li>
+        <li class="boton"  onclick="location.href='index.html'">Incio</li>
+        <li class="boton"  onclick="location.href='mostrar.php'">Tabla</li>
         <li class="boton"  onclick="location.href='https://twitter.com'">Twitter</li>
         <li class="boton"  onclick="location.href='https://www.instagram.com'">Instagram</li>
         <li class="boton"  onclick="location.href='https://www.youtube.com'">Youtube</li>
-        <li class="boton"  onclick="location.href='https://mail.google.com/'">Gmail</li>
       </ul>
     </div>
 
@@ -28,11 +38,11 @@
 
       <div class="dropdown border_shadow" id="dropdown">
         <ul style="padding: 0; margin: 0" >
-          <li class="boton_dropdown center" style="background:#c49018" onclick="location.href='index.html'">Volver</li>
-          <li class="boton_dropdown center" style="background:#e4ac2b" onclick="location.href='https://www.github.com'">Twitter</li>
-          <li class="boton_dropdown center" style="background:#c49018" onclick="location.href='https://www.github.com'">Instagram</li>
-          <li class="boton_dropdown center" style="background:#e4ac2b" onclick="location.href='https://www.github.com'">Youtube</li>
-          <li class="boton_dropdown center" style="background:#c49018" onclick="location.href='https://www.github.com'">Gmail</li>
+          <li class="boton_dropdown center" onclick="location.href='index.html'">Inicio</span></li>
+          <li class="boton_dropdown center" onclick="location.href='mostrar.php'">Tabla</a></li>
+          <li class="boton_dropdown center" onclick="location.href='https://www.github.com'">Github</a></li>
+          <li class="boton_dropdown center" onclick="location.href='https://www.instagram.com'">Instagram</a></li>
+          <li class="boton_dropdown center" onclick="location.href='https://www.youtube.com'">Youtube</a></li>
         </ul>
       </div>
     </div>
